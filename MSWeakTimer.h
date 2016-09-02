@@ -69,6 +69,7 @@
  * and it's easier to place the `invalidate` call there, instead of figuring out a safe place to do it.
  */
 - (void)invalidate;
+@property (readonly, getter=isValid) BOOL valid;
 
 - (id)userInfo;
 

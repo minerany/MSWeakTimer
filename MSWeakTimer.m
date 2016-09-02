@@ -194,6 +194,11 @@
     }
 }
 
+-(BOOL)isValid
+{
+    return !OSAtomicAnd32OrigBarrier(1, &_timerFlags.timerIsInvalidated);
+}
+
 - (void)timerFired
 {
     // Checking attomatically if the timer has already been invalidated.
